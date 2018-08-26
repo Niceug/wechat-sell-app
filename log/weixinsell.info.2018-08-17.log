@@ -1,0 +1,883 @@
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 15260 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@385c9627: startup date [Fri Aug 17 13:03:07 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1fc2107e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1368 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@385c9627: startup date [Fri Aug 17 13:03:07 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 4.362 seconds (JVM running for 5.676)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting OrderServiceImplTest on LAPTOP-0ECG6CSM with PID 4504 (started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@748741cb: startup date [Fri Aug 17 14:06:45 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$355e6147] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@748741cb: startup date [Fri Aug 17 14:06:45 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+Started OrderServiceImplTest in 7.577 seconds (JVM running for 9.406)
+HHH000397: Using ASTQueryTranslatorFactory
+Closing org.springframework.web.context.support.GenericWebApplicationContext@748741cb: startup date [Fri Aug 17 14:06:45 CST 2018]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 13076 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@385c9627: startup date [Fri Aug 17 14:27:11 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$55c0173a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1122 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@385c9627: startup date [Fri Aug 17 14:27:11 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 3.558 seconds (JVM running for 4.275)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 88 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@385c9627: startup date [Fri Aug 17 14:28:28 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73edc5e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1079 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@385c9627: startup date [Fri Aug 17 14:28:28 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 3.558 seconds (JVM running for 4.345)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 13624 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@385c9627: startup date [Fri Aug 17 14:30:14 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7817c310] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1130 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@385c9627: startup date [Fri Aug 17 14:30:14 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 3.559 seconds (JVM running for 4.29)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 6716 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@229f66ed: startup date [Fri Aug 17 14:37:06 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3fdb3db5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1775 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@229f66ed: startup date [Fri Aug 17 14:37:06 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 4.851 seconds (JVM running for 6.21)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 15784 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31190526: startup date [Fri Aug 17 15:03:15 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5058c3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1165 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31190526: startup date [Fri Aug 17 15:03:15 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 3.656 seconds (JVM running for 4.375)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 14144 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@229f66ed: startup date [Fri Aug 17 15:04:15 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3fdb3db5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1234 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@229f66ed: startup date [Fri Aug 17 15:04:15 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 3.785 seconds (JVM running for 4.53)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 6776 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5aa9e4eb: startup date [Fri Aug 17 15:04:56 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$511ddfca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1257 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5aa9e4eb: startup date [Fri Aug 17 15:04:56 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 3.89 seconds (JVM running for 4.691)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 4312 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31190526: startup date [Fri Aug 17 16:22:08 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df54bbb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1661 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31190526: startup date [Fri Aug 17 16:22:08 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 4.948 seconds (JVM running for 6.206)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 8356 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31190526: startup date [Fri Aug 17 16:27:37 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df54bbb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1374 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31190526: startup date [Fri Aug 17 16:27:37 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 4.123 seconds (JVM running for 4.98)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+HHH000397: Using ASTQueryTranslatorFactory
+返回信息为:redirect:http://yuisamasell.natapp1.cc/sell/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamasell.natapp1.cc/sell/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamasell.natapp1.cc/sell/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamasell.natapp1.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 5260 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@217ed35e: startup date [Fri Aug 17 17:05:35 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff479463] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1235 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@217ed35e: startup date [Fri Aug 17 17:05:35 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 3.85 seconds (JVM running for 4.863)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+HHH000397: Using ASTQueryTranslatorFactory
+返回信息为:redirect:http://yuisamasell.natapp1.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+Starting WeixinsellApplication on LAPTOP-0ECG6CSM with PID 1596 (D:\programming\EE\target\classes started by 38134 in D:\programming\EE)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@229f66ed: startup date [Fri Aug 17 17:11:30 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a7e0f3b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.32
+The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\programming\jdk1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:;D:\programming\jdk1.8\bin;D:\programming\jdk1.8\jre\bin; \ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;D:\programming\apache-maven-3.5.2\bin;D:\Applications\Svn\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Local\GitHubDesktop\bin;D:\programming\Microsoft VS Code\bin;C:\Users\38134\AppData\Local\Microsoft\WindowsApps;C:\Users\38134\AppData\Roaming\npm;D:\programming\Fiddler;.]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1384 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.2.17.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@229f66ed: startup date [Fri Aug 17 17:11:30 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.bitekeji.weixinsell.controller.BuyerOrderController.create(com.bitekeji.weixinsell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<java.util.List<com.bitekeji.weixinsell.dto.OrderDTO>> com.bitekeji.weixinsell.controller.BuyerOrderController.list(com.bitekeji.weixinsell.form.OrderListForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.detail(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancle],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO<com.bitekeji.weixinsell.dto.OrderDTO> com.bitekeji.weixinsell.controller.BuyerOrderController.cancle(com.bitekeji.weixinsell.form.OrderDetailForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.bitekeji.weixinsell.VO.ResultVO com.bitekeji.weixinsell.controller.BuyerProductController.list()
+Mapped "{[/seller/order/list]}" onto public org.springframework.web.servlet.ModelAndView com.bitekeji.weixinsell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.userInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.bitekeji.weixinsell.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/weixin/auth],methods=[GET]}" onto public void com.bitekeji.weixinsell.controller.WeixinController.auth(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Adding welcome page: class path resource [static/index.html]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Bean with name 'dataSource' has been autodetected for JMX exposure
+Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http) with context path '/sell'
+Started WeixinsellApplication in 3.912 seconds (JVM running for 4.968)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+HHH000397: Using ASTQueryTranslatorFactory
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://h34b87.natappfree.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
+返回信息为:redirect:http://yuisamapre.s1.natapp.cc/?openid=ought1V4W2TkCSnlUSVGQC6Zo9r0
